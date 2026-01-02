@@ -102,6 +102,26 @@ jobs:
           lfs: true
           path: Assets/Resources/SymCards
 
+      - name: Debug - List main directory
+        run: |
+          echo "=== Contents of main directory ==="
+          ls -la
+          echo ""
+          echo "=== Full directory tree (up to 3 levels) ==="
+          find . -maxdepth 3 -type d | head -50
+
+      - name: Debug - List Assets/Resources/SymCards
+        run: |
+          echo "=== Contents of Assets/Resources/SymCards ==="
+          if [ -d "Assets/Resources/SymCards" ]; then
+            ls -la Assets/Resources/SymCards
+            echo ""
+            echo "=== Subdirectories ==="
+            find Assets/Resources/SymCards -maxdepth 2 -type d
+          else
+            echo "Directory Assets/Resources/SymCards does not exist!"
+          fi
+
       - name: Clean Docker cache
         run: |
           docker system prune -a -f --volumes
