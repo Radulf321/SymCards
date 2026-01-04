@@ -90,17 +90,11 @@ jobs:
 
     steps:
       # Checkout
-      - name: Checkout framework
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           lfs: true
-          repository: Radulf321/Card-Game
-
-      - name: Checkout resources
-        uses: actions/checkout@v4
-        with:
-          lfs: true
-          path: Assets/Resources/SymCards
+          submodules: 'recursive'
 
       - name: Debug - List main directory
         run: |
@@ -178,17 +172,11 @@ jobs:
 
     steps:
       # Checkout
-      - name: Checkout framework
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           lfs: true
-          repository: Radulf321/Card-Game
-
-      - name: Checkout resources
-        uses: actions/checkout@v4
-        with:
-          lfs: true
-          path: Assets/Resources/SymCards
+          submodules: 'recursive'
 
       - name: Clean Docker cache
         run: |
