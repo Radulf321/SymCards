@@ -1,0 +1,18 @@
+{
+    "id": "integratorsOverall",
+    "name": {
+        "en": "Integrator's Overall",
+        "de": "Overall des Integrators"
+    },
+    "slot": "body",
+    "icon": "IntegratorsOverall",
+    "effects": [
+        {
+            "type": "cards",
+            "cards": [
+                "createVariable",
+                "createVariable"
+            ]
+        }
+    ]
+}
