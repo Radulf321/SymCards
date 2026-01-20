@@ -38,6 +38,20 @@
     ],
     "currencies": [
         {
+            "id": "rounds",
+            "name": {
+                "en": "Rounds",
+                "de": "Runden"
+            },
+            "icon": "Rounds",
+            "type": "health",
+            "starting": 4,
+            "format": {
+                "en": "${amount} <sprite name=\"Rounds\"> remaining",
+                "de": "Noch ${amount} <sprite name=\"Rounds\">"
+            }
+        },
+        {
             "id": "cash",
             "name": {
                 "en": "SymCoin",
@@ -148,6 +162,16 @@
         }
     ],
     "triggerActions": [
+        {
+            "trigger": {
+                "type": "endround"
+            },
+            "effect": {
+                "type": "currency",
+                "currency": "rounds",
+                "amount": 1
+            }
+        },
         {
             "trigger": {
                 "type": "startturn",

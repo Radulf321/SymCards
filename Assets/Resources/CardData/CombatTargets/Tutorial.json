@@ -580,7 +580,9 @@
                     "type": "reward",
                     "rewards": [
                         {
-                            "type": "rounds"
+                            "type": "currency",
+                            "currency": "rounds",
+                            "amount": 1
                         }
                     ]
                 },

@@ -157,11 +157,14 @@
                     }
                 },
                 {
-                    "type": "text",
-                    "text": {
-                        "en": "You lose an additional <sprite name=\"Rounds\">",
-                        "de": "Du verlierst einen zusätzlichen <sprite name=\"Rounds\">"
-                    }
+                    "type": "reward",
+                    "rewards": [
+                        {
+                            "type": "currency",
+                            "currency": "rounds",
+                            "amount": -1
+                        }
+                    ]
                 }
             ]
         }
@@ -476,7 +479,8 @@
                     "type": "reward",
                     "rewards": [
                         {
-                            "type": "rounds",
+                            "type": "currency",
+                            "currency": "rounds",
                             "amount": 4
                         }
                     ]
