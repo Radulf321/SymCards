@@ -169,7 +169,7 @@
             "effect": {
                 "type": "currency",
                 "currency": "rounds",
-                "amount": 1
+                "amount": -1
             }
         },
         {
